@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_name: 
+  user_id: 1
+  house_description: 
+  price: 1
+  adress: 
+  house_state: 
+
+two:
+  house_name: 
+  user_id: 1
+  house_description: 
+  price: 1
+  adress: 
+  house_state: 
