@@ -1,0 +1,22 @@
+<h2>家の登録</h2>
+<%= form_for :house, url: houses_path do |f| %>
+
+<p>
+  <%= f.text_field :house_name, placeholder: "enter house_name" %>
+</p>
+
+<p>
+  <%= f.text_area :house_description, placeholder: "enter house_description" %>
+</p>
+
+<p>
+  <%= f.number_field :price, placeholder: "enter price" %>
+</p>
+
+<p>
+  <%= f.text_field :adress, placeholder: "enter adress" %>
+</p>
+
+<%= f.submit %>
+
+<% end %>
