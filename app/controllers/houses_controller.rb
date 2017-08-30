@@ -9,13 +9,17 @@ class HousesController < ApplicationController
  end
 
  def new
+   @house = House.new
  end
 
  def create
    #render plain: params[:house].inspect
    @house = House.new(house_params)
-   @house.save
-    redirect_to houses_path
+   if @house.save
+     redirect_to houses_path
+   else
+    render 'new'
+   end
  end
 
 
