@@ -1,7 +1,11 @@
-<h2>houses</h2>
-
+<h2>
+  家一覧
+  <%= link_to "家の登録はこちら", new_house_path, class: "header-menu" %>
+</h2>
 <ul>
   <% @houses.each do |house| %>
-  <li><%= house.house_name %></li>
+  <li>
+    <%= link_to house.house_name, house_path(house) %>
+  </li>
   <% end %>
 </ul>
