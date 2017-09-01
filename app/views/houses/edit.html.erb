@@ -1,0 +1,34 @@
+<h2>登録内容の編集</h2>
+<%= form_for @house, url: houses_path(@house) do |f| %>
+
+<p>
+  <%= f.text_field :house_name, placeholder: "enter house_name" %>
+  <% if @house.errors.messages[:house_name].any? %>
+  <span class="error"><%= @house.errors.messages[:house][0] %></span>
+  <% end %>
+</p>
+
+<p>
+  <%= f.text_area :house_description, placeholder: "enter house_description" %>
+  <% if @house.errors.messages[:house_description].any? %>
+  <span class="error"><%= @house.errors.messages[:house_description][0] %></span>
+  <% end %>
+</p>
+
+<p>
+  <%= f.number_field :price, placeholder: "enter price" %>
+  <% if @house.errors.messages[:price].any? %>
+  <span class="error"><%= @house.errors.messages[:price][0] %></span>
+  <% end %>
+</p>
+
+<p>
+  <%= f.text_field :adress, placeholder: "enter adress" %>
+  <% if @house.errors.messages[:adress].any? %>
+  <span class="error"><%= @house.errors.messages[:adress][0] %></span>
+  <% end %>
+</p>
+
+<%= f.submit %>
+
+<% end %>
